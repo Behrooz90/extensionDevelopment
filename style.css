@@ -1,0 +1,57 @@
+*{
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+body{
+
+    width:100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+    
+    background-size: cover;
+
+}
+
+
+.settings,.sound,.character,.about,.deskItems{
+
+    background-color: hsla(34, 79%, 63%, 0.712);
+    padding: 5px;
+
+    font-size: 1.5em;
+
+    font-family: Bradley Hand;
+    
+    border-width:0.5mm; 
+
+    outline: none;
+
+    width:200px;
+
+    color:#fff;
+
+    transition: 0.3s;
+
+}
+
+.settings:hover ,.sound:hover ,.character:hover ,.about:hover ,.deskItems:hover {
+
+    background-color: #b7811c;
+
+}
+
+
+
+
+
+
