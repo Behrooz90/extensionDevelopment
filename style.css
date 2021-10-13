@@ -23,7 +23,7 @@ body{
 }
 
 
-.settings,.sound,.character,.about,.deskItems{
+.settings,.sound,.character,.about,.deskItems,.restrictedSites,.time{
 
     background-color: hsla(34, 79%, 63%, 0.712);
     padding: 5px;
@@ -44,7 +44,7 @@ body{
 
 }
 
-.settings:hover ,.sound:hover ,.character:hover ,.about:hover ,.deskItems:hover {
+.settings:hover ,.sound:hover ,.character:hover ,.about:hover ,.deskItems:hover,.restrictedSites:hover, .time:hover {
 
     background-color: #b7811c;
 
