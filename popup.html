@@ -4,20 +4,22 @@
         <link rel="stylesheet" href="style.css">
 
     <body>
-
          <div class="buttons">
-            <button class="settings">Settings
-                <select>
-                    <option value="Sound">Sound</option>
-                    <option value="Character">Character</option>
-                    <option value="Time">Time</option>
-                    <option value="Restricted Sties">Restricted Sties</option>
-                    <option value="Desk Items">Desk Items</option>
-                    <option value="About">About</option>            
-                </select>
-            </button>
+            <button type="button" class="collapsible">Settings</button>
+                <!-- <div class= 'content'>
+                     <select>
+                        <option value="Sound">Sound</option>
+                        <option value="Character">Character</option>
+                        <option value="Time">Time</option>
+                        <option value="Restricted Sties">Restricted Sties</option>
+                        <option value="Desk Items">Desk Items</option>
+                        <option value="About">About</option>            
+                    </select> 
+                </div> -->
             <br>
-            <button class="sound">Sound</button>
+            <button class="sound">Sound
+                
+            </button>
             <br>
             <button class="character">Character</button>
             <br>
@@ -30,8 +32,27 @@
             <button class="about">About</button>
 
 
-        </div>             
-        
+        </div>      
+        <script type="text/javascript" src="/Users/bethlehem/extensionDevelopment/background.js"></script>
+       
+        <!-- <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+            "collapsible".addEventListener("click",function()){
+
+            }
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                  content.style.display = "none";
+                } else {
+                  content.style.display = "block";
+                }
+              });
+            }
+            </script> -->
     </body>
 
 </html>

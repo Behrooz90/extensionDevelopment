@@ -22,21 +22,26 @@ body{
 
 }
 
+/* .collapsible:focus{
+        width: 100%;
+        height: 74px;   
+} */
 
-.settings,.sound,.character,.about,.deskItems,.restrictedSites,.time{
+.collapsible,.sound,.character,.about,.deskItems,.restrictedSites,.time{
 
     background-color: hsla(34, 79%, 63%, 0.712);
-    padding: 5px;
 
-    font-size: 1.5em;
+    padding: 3px;
 
-    font-family: Bradley Hand;
+    font-size: 1.2em;
+
+    font-family: Comic Sans MS;
     
     border-width:0.5mm; 
 
     outline: none;
 
-    width:200px;
+    width:100%;
 
     color:#fff;
 
@@ -44,12 +49,25 @@ body{
 
 }
 
-.settings:hover ,.sound:hover ,.character:hover ,.about:hover ,.deskItems:hover,.restrictedSites:hover, .time:hover {
+.collapsible:hover ,.sound:hover ,.character:hover ,.about:hover ,.deskItems:hover,.restrictedSites:hover, .time:hover {
 
     background-color: #b7811c;
 
 }
 
+ #settings ul li:hover > ul {
+
+    left: 200px;
+
+    -webkit-transition: left 200ms ease-in;
+
+    -moz-transition: left 200ms ease-in;
+
+    -ms-transition: left 200ms ease-in;
+
+    transition: left 200ms ease-in;
+
+} 
 
 
 
