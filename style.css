@@ -1,36 +1,32 @@
-*{
+ *{
 
     margin: 0;
 
     padding: 0;
 
-    box-sizing: border-box;
+    box-sizing:content-box;
 
-}
-
-body{
+}  
+ 
+/* body{
 
     width:100%;
 
-    display: flex;
+    display:flex;
 
-    justify-content: center;
+    justify-content:center;
 
-    align-items: center;
+    align-items:center;
     
-    background-size: cover;
+    background-size:auto;
 
-}
+}  */
 
-/* .collapsible:focus{
-        width: 100%;
-        height: 74px;   
-} */
 
-.collapsible,.sound,.character,.about,.deskItems,.restrictedSites,.time{
+
+.collapsible{
 
     background-color: hsla(34, 79%, 63%, 0.712);
-
     padding: 3px;
 
     font-size: 1.2em;
@@ -49,25 +45,22 @@ body{
 
 }
 
-.collapsible:hover ,.sound:hover ,.character:hover ,.about:hover ,.deskItems:hover,.restrictedSites:hover, .time:hover {
+.active, .collapsible:hover {
+    background-color: rgb(223, 171, 60);
+    width: 100%;
+  }
 
-    background-color: #b7811c;
+.content   {
+    box-sizing:border-box;
+    width: 100%;
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
 
-}
-
- #settings ul li:hover > ul {
-
-    left: 200px;
-
-    -webkit-transition: left 200ms ease-in;
-
-    -moz-transition: left 200ms ease-in;
-
-    -ms-transition: left 200ms ease-in;
-
-    transition: left 200ms ease-in;
-
-} 
+  
 
 
 

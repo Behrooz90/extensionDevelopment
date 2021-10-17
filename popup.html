@@ -5,54 +5,49 @@
 
     <body>
          <div class="buttons">
-            <button type="button" class="collapsible">Settings</button>
-                <!-- <div class= 'content'>
-                     <select>
-                        <option value="Sound">Sound</option>
-                        <option value="Character">Character</option>
-                        <option value="Time">Time</option>
-                        <option value="Restricted Sties">Restricted Sties</option>
-                        <option value="Desk Items">Desk Items</option>
-                        <option value="About">About</option>            
-                    </select> 
-                </div> -->
-            <br>
-            <button class="sound">Sound
-                
-            </button>
-            <br>
-            <button class="character">Character</button>
-            <br>
-            <button class="time">Time</button>  
-            <br>
-            <button class="restrictedSites">Restricted Sites</button>  
-            <br>
-            <button class="deskItems">Desk Items</button>  
-            <br>
-            <button class="about">About</button>
+            <button name="sound" class="collapsible">Sound</button>
+            <div class="content">
+              <select>
+                <option value="sound1">Chime</option> 
+                <option value="sount2">Alarm</option>            
+            </select>
+              </div>
 
+            <button name="character" class="collapsible">Character</button>
+            <div class="content">
+              <img src="images/girl.png" alt="girl studying in light theme" width="500" height="333">  
+              <img src="images/girl_dark.png" alt="girl studying in dark theme" width="500" height="333">      
+              <img src="images/first_character.png" alt="girl studying in light theme" width="500" height="333">          
+             </div>
 
-        </div>      
-        <script type="text/javascript" src="/Users/bethlehem/extensionDevelopment/background.js"></script>
-       
-        <!-- <script>
-            var coll = document.getElementsByClassName("collapsible");
-            var i;
-            "collapsible".addEventListener("click",function()){
+            <button name="time" class="collapsible">Time</button>  
+            <div class="content">
+              study, short break, and long break times
+            </div>
 
-            }
-            for (i = 0; i < coll.length; i++) {
-              coll[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var content = this.nextElementSibling;
-                if (content.style.display === "block") {
-                  content.style.display = "none";
-                } else {
-                  content.style.display = "block";
-                }
-              });
-            }
-            </script> -->
+            <button name="restrictedSites" class="collapsible">Restricted Sites</button>  
+            <div class="content">
+              The following are the sites you may access
+              <list>
+                <li value="Desk Items">Desk Items</li>
+                <li value="About">About</li>            
+                </list>
+              </div>
+              
+            <button name="deskItems" class="collapsible">Desk Items</button>  
+            <div class="content">
+              <img src="images/plant.png" alt="green plant in brown clay pot" >
+              </div>
+              
+            <button name="about" class="collapsible">About</button>
+            <div class="content">
+             This is version 1.0 of Study Buddy developed by E, J, and B..
+             
+              </div>
+        
+
+            </div>   
+            <script src="popup.js"></script>
     </body>
 
 </html>
