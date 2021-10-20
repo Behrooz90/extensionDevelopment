@@ -44,6 +44,19 @@ body{
 
 }
 
+.char {
+    background-color: hsla(34, 79%, 63%, 0.712);
+    padding: 2px;
+    font-size: 1em;
+    font-weight:900;
+    font-family: Bradley Hand;
+    border-width:0.5mm; 
+    outline: none;
+    width:200px;
+    color:#fff;
+    transition: 0.3s;
+}
+
 .settings:hover ,.sound:hover ,.character:hover ,.about:hover ,.deskItems:hover,.restrictedSites:hover, .time:hover {
 
     background-color: #b7811c;

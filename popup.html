@@ -1,13 +1,6 @@
 <html>
-    <body onLoad="window.open('Character_B.png','','height=150,width=190,scrollbars=no,titlebar=no,menubar=no,channelmode=yes')">
-    <!-- <body onload="window.opener('Character_B.png')"> -->
-        <div style= "white-space:nowrap">
-        Wouldn't it be nice to see the settings here?
-        </div>
-
-
+    <body>
         <link rel="stylesheet" href="style.css">
-
     <body>
 
          <div class="buttons">
@@ -22,6 +15,10 @@
                 </select>
             </button>
             <br>
+            <button class="char" for="char"> Initialize Character:
+                <input type="checkbox" id="char">
+            </button>
+            <br>
             <button class="sound">Sound</button>
             <br>
             <button class="character">Character</button>
@@ -33,10 +30,10 @@
             <button class="deskItems">Desk Items</button>  
             <br>
             <button class="about">About</button>
+        </div>
 
+        <script src="popup.js"></script>
 
-        </div>             
-        
     </body>
 
 </html>

@@ -20,6 +20,8 @@
         "default_title":"Study Budy", 
         "default_popup": "popup.html"
     },
-    "permissions":["activeTab"]
-
+    "permissions":[
+        "activeTab",
+        "tabs"
+    ]
 }
