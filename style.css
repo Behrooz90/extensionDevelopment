@@ -1,68 +1,23 @@
- *{
-
-    margin: 0;
-
-    padding: 0;
-
-    box-sizing:content-box;
-
-}  
- 
-/* body{
-
-    width:100%;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-    
-    background-size:auto;
-
-}  */
-
-
-
-.collapsible{
-
-    background-color: hsla(34, 79%, 63%, 0.712);
-    padding: 3px;
-
-    font-size: 1.2em;
-
-    font-family: Comic Sans MS;
-    
-    border-width:0.5mm; 
-
-    outline: none;
-
-    width:100%;
-
-    color:#fff;
-
-    transition: 0.3s;
-
+.collapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 200px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
 }
 
 .active, .collapsible:hover {
-    background-color: rgb(223, 171, 60);
-    width: 100%;
-  }
+  background-color: #ccc; 
+}
 
-.content   {
-    box-sizing:border-box;
-    width: 100%;
-    padding: 0 18px;
-    background-color: white;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-  }
-
-  
-
-
-
-
-
+.content {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
