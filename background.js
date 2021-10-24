@@ -7,9 +7,6 @@ chrome.tabs.onActivated.addListener(tab => {
 });
 
 
-console.log('background running');
-chrome.browserAction.onClicked.addListener(buttonClicked);
+ console.log('background running');
 
-function buttonClicked(){
-    console.log("button clicked!")
-}
+ 
