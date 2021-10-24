@@ -11,6 +11,4 @@ chrome.tabs.onActivated.addListener(tab => {
 
 chrome.browserAction.onClicked.addListener(buttonClicked);
 
-function buttonClicked(){
-    console.log("button clicked!")
-}
+ 

@@ -54,6 +54,44 @@ for (i = 0; i < acc.length; i++) {
       panel.style.display = "none";
     } else {
       panel.style.display = "block";
+      notification();
     }
   });
+  
 }
+
+
+function notification(){
+ chrome.notifications.create(
+  {
+    type: 'basic',
+    iconUrl: 'images/sbIcon.png',
+    title: 'Test Notification',
+    message: 'Something has been clicked!!!!!!'
+  }
+   )
+}
+
+
+
+
+
+
+// var imageIds = ["images/girl"];
+
+// let loadButton = document.createElement('button');
+// loadButton.innerText = 'Load images';
+// loadButton.addEventListener('click', handleLoadRequest);
+
+// document.querySelector('body').append(loadButton);
+
+// function handleLoadRequest() {
+//   for (var id of imageIds) {
+//     console.log(id +"this is ID");
+//     var element = document.getElementById(id);
+//     console.log(element +"this is element");
+//     element.src = chrome.runtime.getURL(`${id}.png`);
+//     // fetch(element.src)
+    
+//   }
+//}
