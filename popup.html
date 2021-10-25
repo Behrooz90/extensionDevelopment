@@ -19,7 +19,7 @@
 
   <button name="character" class="collapsible">Character</button>
   <div class="content">
-    <img src="images/girl.png" alt="girl studying in light theme" width="200">
+    <img src="images/girl.png" id="images/girl" alt="girl studying in light theme" width="200"> 
     <img src="images/girl_dark.png" alt="girl studying in dark theme" width="200">
     <img src="images/first_character.png" alt="girl studying in light theme" width="200">
     <img src="images/Untitled_Artwork.gif" alt="bouncing bal GIF" width="200">
@@ -27,8 +27,19 @@
 
   <button name="time" class="collapsible">Time</button>
   <div class="content">
-    study, short break, and long break times
-  </div>
+      <button id="focusTimer" title="Focus Timer">
+          Focus
+        <p id="focusTime">00:45</p>
+      </button>
+      <button id="shortBreakTimer" title="Short Break Timer">
+          Short Break
+          <p id="shortTime" >00:10</p>
+        </button>
+      <button id="longBreakTimer" title="Long Break Timer">
+          Long Break
+          <p id="longTime" >00:20</p>
+        </button>
+    </div>
 
   <button name="restrictedSites" class="collapsible">Restricted Sites</button>
   <div class="content">
@@ -48,6 +59,7 @@
   <div class="content">
     This is version 1.0 of Study Buddy developed by E, J, and B..
   </div>
+
 
   <script src="popup.js"></script>
 </body>
