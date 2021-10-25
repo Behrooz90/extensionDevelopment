@@ -6,9 +6,12 @@ function initChar() {
 
 console.log('this is the forground')
 
+
+
+
+/******************  NOTIFICATION *********************************/
 var acc = document.getElementsByClassName("collapsible");
 var i;
-
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function () {
     this.classList.toggle("active");
