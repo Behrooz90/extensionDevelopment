@@ -11,7 +11,7 @@ function initChar() {
 }
 
 function focusTimer(){
-  var sec = 30;
+  var sec = 45;
   var timer = setInterval(function(){
       document.getElementById('focusTime').innerHTML='00:'+sec;
       sec--;
@@ -22,7 +22,7 @@ function focusTimer(){
 }
 
 function shortTimer(){
-  var sec = 30;
+  var sec = 10;
   var timer = setInterval(function(){
       document.getElementById('shortTime').innerHTML='00:'+sec;
       sec--;
@@ -33,7 +33,7 @@ function shortTimer(){
 }
 
 function longTimer(){
-  var sec = 30;
+  var sec = 20;
   var timer = setInterval(function(){
       document.getElementById('longTime').innerHTML='00:'+sec;
       sec--;
