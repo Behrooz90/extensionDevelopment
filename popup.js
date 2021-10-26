@@ -7,7 +7,7 @@ document.getElementById ("longBreakTimer").addEventListener ("click", longTimer,
 
 
 function initChar() {
-  window.open('Character_B.png','','height=150,width=190,scrollbars=no,titlebar=no,menubar=no,channelmode=yes');
+  window.open('images/Character_B.png','','height=150,width=190,scrollbars=no,titlebar=no,menubar=no,channelmode=yes');
 }
 
 function focusTimer(){
@@ -77,24 +77,20 @@ function notification(){
 
 
 
+var imageIds = ["images/girl"];
 
+let loadButton = document.createElement('button');
+loadButton.innerText = 'Load images';
+loadButton.addEventListener('click', handleLoadRequest);
 
+document.querySelector('body').append(loadButton);
 
-// var imageIds = ["images/girl"];
-
-// let loadButton = document.createElement('button');
-// loadButton.innerText = 'Load images';
-// loadButton.addEventListener('click', handleLoadRequest);
-
-// document.querySelector('body').append(loadButton);
-
-// function handleLoadRequest() {
-//   for (var id of imageIds) {
-//     console.log(id +"this is ID");
-//     var element = document.getElementById(id);
-//     console.log(element +"this is element");
-//     element.src = chrome.runtime.getURL(`${id}.png`);
-//     // fetch(element.src)
+ function handleLoadRequest() {
+  for (var id of imageIds) {
+    console.log(id +"this is ID");
+    var element = document.getElementById(id);
+    console.log(element +"this is element");
+    element.src = chrome.runtime.getURL(`${id}.png`);
     
-//   }
-//}
+   }
+}
