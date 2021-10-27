@@ -35,3 +35,18 @@
   background-color: white;
   overflow: hidden;
 }
+
+
+.button {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  border: 2px solid #e3dcdc;
+  width: 32%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  height: 55pt;
+}
+
+.button.hover {
+  background-color: #878787;
+  color: white;
+}
