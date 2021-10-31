@@ -20,17 +20,20 @@
         "default_title":"Study Budy", 
         "default_popup": "popup.html"
     }, 
-    // "web_accessible_resources": [
-    //     {
-    //         "resources": [ "images/*.*" ],
-    //         "matches": [ "<all_urls>" ]
-    //       }
-    //   ],
+    "web_accessible_resources": [
+         "images/*.*" , "Royalty-Free-Kalimba-Sound-Effects-Sample-Pack/*.*"
+
+        // {
+        //     "resources": [ "/images/*" ],
+        //     "matches": [ "*" ]
+        //   }
+      ],
     "permissions":[
        "activeTab",
         "tabs",
         "notifications",
-        "storage"
+        "storage",
+        "<all_urls>"
     ]
    
 }

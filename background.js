@@ -9,6 +9,5 @@ chrome.tabs.onActivated.addListener(tab => {
 });
 
 
-chrome.browserAction.onClicked.addListener(buttonClicked);
 
  

@@ -30,8 +30,9 @@
 
 
 .content {
-  padding: 0 18px;
+  padding: 0%;
   display: none;
   background-color: white;
   overflow: hidden;
 }
+
