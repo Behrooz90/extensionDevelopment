@@ -21,10 +21,12 @@
         "default_popup": "popup.html"
     }, 
     "web_accessible_resources": [
-        {
-            "resources": [ "images/*.*" ],
-            "matches": [ "<all_urls>" ]
-          }
+         "images/*.*" , "Royalty-Free-Kalimba-Sound-Effects-Sample-Pack/*.*"
+
+        // {
+        //     "resources": [ "/images/*" ],
+        //     "matches": [ "*" ]
+        //   }
       ],
     "permissions":[
        "activeTab",
