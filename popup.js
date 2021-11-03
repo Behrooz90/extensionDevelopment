@@ -10,13 +10,18 @@ function initChar() {
   window.open('Character_B.png','','height=150,width=190,scrollbars=no,titlebar=no,menubar=no,channelmode=yes');
 }
 
+// PRESENTATION on monday
+// create the timer on page load instead
+// or, make the frame invisible 
+
 function focusTimer(){
   var sec = 45;
   var timer = setInterval(function(){
       document.getElementById('focusTime').innerHTML='00:'+sec;
       sec--;
       if (sec < 0) {
-          clearInterval(timer);
+        clearInterval(timer);
+        notification().message
       }
   }, 1000);
 }
@@ -27,7 +32,7 @@ function shortTimer(){
       document.getElementById('shortTime').innerHTML='00:'+sec;
       sec--;
       if (sec < 0) {
-          clearInterval(timer);
+        clearInterval(timer);
       }
   }, 1000);
 }
@@ -61,16 +66,35 @@ for (i = 0; i < acc.length; i++) {
 }
 
 
-function notification(){
+// function notification(){
+//   messages [
+//     'Generic Message',
+
+//   ]
+
  chrome.notifications.create(
   {
     type: 'basic',
     iconUrl: 'images/sbIcon.png',
     title: 'Test Notification',
-    message: 'Something has been clicked!!!!!!'
+    message: 'Message',
+    priority: 2,
+    buttons: [
+      {
+        title: 'Yes',
+        //iconUrl: 'images/sbIconpng'
+      },
+      {
+        title: 'No'
+      }
+    ]
+    
   }
-   )
-}
+  
+  
+  )
+  
+
 
 
 
