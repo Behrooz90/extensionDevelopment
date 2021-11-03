@@ -10,6 +10,8 @@ function initChar() {
   window.open('images/Character_B.png','','height=150,width=190,scrollbars=no,titlebar=no,menubar=no,channelmode=yes');
 }
 
+
+/******************  POMODORO TIMER *********************************/
 function focusTimer(){
   var sec = 45;
   var timer = setInterval(function(){
