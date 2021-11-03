@@ -7,7 +7,7 @@ document.getElementById ("longBreakTimer").addEventListener ("click", longTimer,
 
 
 function initChar() {
-  window.open('images/Character_B.png','','height=150,width=190,scrollbars=no,titlebar=no,menubar=no,channelmode=yes');
+  window.open('images/girl.png','','height=150,width=175,scrollbars=no,titlebar=no,menubar=no,channelmode=yes');
 }
 
 // PRESENTATION on monday
@@ -17,35 +17,38 @@ function initChar() {
 
 /******************  POMODORO TIMER *********************************/
 function focusTimer(){
-  var sec = 45;
+  var sec = 8;
   var timer = setInterval(function(){
       document.getElementById('focusTime').innerHTML='00:'+sec;
       sec--;
       if (sec < 0) {
         clearInterval(timer);
-        notification().message
+        notification();
+        chrome.notifications.onButtonClicked.addListener(yesButton);
       }
   }, 1000);
 }
 
 function shortTimer(){
-  var sec = 10;
+  var sec = 2;
   var timer = setInterval(function(){
       document.getElementById('shortTime').innerHTML='00:'+sec;
       sec--;
       if (sec < 0) {
         clearInterval(timer);
+        notification();
       }
   }, 1000);
 }
 
 function longTimer(){
-  var sec = 20;
+  var sec = 5;
   var timer = setInterval(function(){
       document.getElementById('longTime').innerHTML='00:'+sec;
       sec--;
       if (sec < 0) {
           clearInterval(timer);
+          notification();
       }
   }, 1000);
 }
@@ -75,27 +78,36 @@ for (i = 0; i < acc.length; i++) {
 
 //   ]
 
- chrome.notifications.create(
-  {
-    type: 'basic',
-    iconUrl: 'images/sbIcon.png',
-    title: 'Test Notification',
-    message: 'Message',
-    priority: 2,
-    buttons: [
-      {
-        title: 'Yes',
-        //iconUrl: 'images/sbIconpng'
-      },
-      {
-        title: 'No'
-      }
-    ]
-    
-  }
- ) //the following section is to select and cut the audio short
+
+function notification() {
+  chrome.notifications.create(
+    {
+      type: 'basic',
+      iconUrl: 'images/sbIcon.png',
+      title: 'Test Notification',
+      message: 'Message',
+      priority: 2,
+      buttons: [
+        {
+          title: 'Yes',
+          //iconUrl: 'images/sbIconpng'
+        },
+        {
+          title: 'No'
+        }
+      ]
+      
+    }
+   ) 
+}
+ 
+function yesButton(){
+  shortTimer();
+  console.log('yes button worked');
+}
 
 
+ //the following section is to select and cut the audio short
  audio.play(); 
   setTimeout(() => {
     audio.pause();
