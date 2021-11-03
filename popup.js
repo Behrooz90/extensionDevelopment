@@ -80,7 +80,7 @@ for (i = 0; i < acc.length; i++) {
 
 
 function notification() {
-  chrome.notifications.create(
+  chrome.notifications.create('basicNotification',
     {
       type: 'basic',
       iconUrl: 'images/sbIcon.png',
