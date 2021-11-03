@@ -1,6 +1,6 @@
 {
     "manifest_version":2,
-    "name": "Study Budy",
+    "name": "Chroma",
     "version": "2.1.0",
     "content_scripts":[
        { 
@@ -13,24 +13,27 @@
     "background":{
         "scripts": ["background.js"]
     },
-    "description": "A SB button for your tool bar.",
-    "icons":{"128":"images/sbIcon_128.png"},
+    "description": "A Chroma button for your tool bar.",
+    "icons":{"128":"images/new-icon.png"},
     "browser_action": {
-        "default_icon": "images/sbIcon.png",
-        "default_title":"Study Budy", 
+        "default_icon": "images/new-icon.png",
+        "default_title":"Chroma", 
         "default_popup": "popup.html"
     }, 
-    // "web_accessible_resources": [
-    //     {
-    //         "resources": [ "images/*.*" ],
-    //         "matches": [ "<all_urls>" ]
-    //       }
-    //   ],
+    "web_accessible_resources": [
+         "images/*.*" , "Royalty-Free-Kalimba-Sound-Effects-Sample-Pack/*.*"
+
+        // {
+        //     "resources": [ "/images/*" ],
+        //     "matches": [ "*" ]
+        //   }
+      ],
     "permissions":[
        "activeTab",
         "tabs",
         "notifications",
-        "storage"
+        "storage",
+        "<all_urls>"
     ]
    
 }

@@ -7,13 +7,15 @@ document.getElementById ("longBreakTimer").addEventListener ("click", longTimer,
 
 
 function initChar() {
-  window.open('Character_B.png','','height=150,width=190,scrollbars=no,titlebar=no,menubar=no,channelmode=yes');
+  window.open('images/Character_B.png','','height=150,width=190,scrollbars=no,titlebar=no,menubar=no,channelmode=yes');
 }
 
 // PRESENTATION on monday
 // create the timer on page load instead
 // or, make the frame invisible 
 
+
+/******************  POMODORO TIMER *********************************/
 function focusTimer(){
   var sec = 45;
   var timer = setInterval(function(){
@@ -48,9 +50,10 @@ function longTimer(){
   }, 1000);
 }
 
+
+/******************  NOTIFICATION & DROP DOWN *********************************/
 var acc = document.getElementsByClassName("collapsible");
 var i;
-
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function () {
     this.classList.toggle("active");
@@ -90,32 +93,38 @@ for (i = 0; i < acc.length; i++) {
     ]
     
   }
-  
-  
-  )
-  
+ ) //the following section is to select and cut the audio short
+
+
+ audio.play(); 
+  setTimeout(() => {
+    audio.pause();
+    audio.currentTime = 0; 
+}, 300);
 
 
 
 
+/*  THIS IS THE SECTION FOR THE POP IMAGE 
+var imageIds = ["images/girl"];
+Making the button. When clciked it should show the image 
+let loadButton = document.createElement('button');
+loadButton.innerText = 'Load images';
+loadButton.addEventListener('click', handleLoadRequest);
+document.querySelector('body').append(loadButton);
 
+function handleLoadRequest() {
+  for (var id of imageIds) {
+    console.log(id +"this is ID");
+    var element = document.getElementById(id);
+    console.log(element +"this is element");
+  element.src = chrome.runtime.getURL(`${id}.png`);
+  console.log(element.src);
+  chrome.sendMessage(element.src)
+   var imgURL = chrome.runtime.getURL("images/girl.png");
+   document.getElementById("images/girl").src = imgURL;
 
-
-// var imageIds = ["images/girl"];
-
-// let loadButton = document.createElement('button');
-// loadButton.innerText = 'Load images';
-// loadButton.addEventListener('click', handleLoadRequest);
-
-// document.querySelector('body').append(loadButton);
-
-// function handleLoadRequest() {
-//   for (var id of imageIds) {
-//     console.log(id +"this is ID");
-//     var element = document.getElementById(id);
-//     console.log(element +"this is element");
-//     element.src = chrome.runtime.getURL(`${id}.png`);
-//     // fetch(element.src)
     
-//   }
-//}
+   }
+}
+*/
