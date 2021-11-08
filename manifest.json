@@ -14,19 +14,14 @@
         "scripts": ["background.js"]
     },
     "description": "A Chroma button for your tool bar.",
-    "icons":{"128":"images/new-icon.png"},
+    "icons":{"128":"images/sbicon.png"},
     "browser_action": {
-        "default_icon": "images/new-icon.png",
+        "default_icon": "images/sbicon.png",
         "default_title":"Chroma", 
         "default_popup": "popup.html"
     }, 
     "web_accessible_resources": [
          "images/*.*" , "Royalty-Free-Kalimba-Sound-Effects-Sample-Pack/*.*"
-
-        // {
-        //     "resources": [ "/images/*" ],
-        //     "matches": [ "*" ]
-        //   }
       ],
     "permissions":[
        "activeTab",
