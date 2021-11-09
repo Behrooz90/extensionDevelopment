@@ -99,20 +99,19 @@ function notification() {
       
     }
    ) 
+   //the following section is cut the audio short
+ audio.play(); 
+ setTimeout(() => {
+   audio.pause();
+   audio.currentTime = 0; 
+}, 300);
 }
  
 function yesButton(){
   shortTimer();
   console.log('yes button worked');
 }
-
-
- //the following section is to select and cut the audio short
- audio.play(); 
-  setTimeout(() => {
-    audio.pause();
-    audio.currentTime = 0; 
-}, 300);
+ 
 
 
 
