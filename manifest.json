@@ -16,7 +16,7 @@
     "description": "A Chroma button for your tool bar.",
     "icons":{"128":"images/new-icon.png"},
     "browser_action": {
-        "default_icon": "images/new-con.png",
+        "default_icon": "images/new-icon.png",
         "default_title":"Chroma", 
         "default_popup": "popup.html"
     }, 
