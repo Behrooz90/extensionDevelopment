@@ -1,3 +1,67 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7b90fbd2d3a94d9d1d97c6e9473f69da84015a582a515710cab4e249e8b8f9de
-size 2940
+<!DOCTYPE html>
+<html>
+
+<body>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Indie+Flower">
+
+  <div class="char">
+    <label class="switch" for="char">
+      <input type="checkbox" id="char">
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <button name="sound" class="collapsible" id="Sound">Sound</button>
+  <div class="content">
+    <select id= "tracks">
+      <option value="chime" id ="chime">Chime</option>
+      <option value="alarm" id ="alarm">Alarm</option>
+    </select>
+  </div>
+
+  <button name="character" class="collapsible">Character</button>
+  <div class="content">
+    <img src="images/CharacterUnderTree.gif" id="images/girl" alt="girl studying in coffee shop" width="49.1%"> 
+    <!-- <img src="images/BLINK.gif" id="images/girl" alt="girl studying in coffee shop" width="49.1%"> 
+    <img src="images/Animate.gif" id="images/girl" alt="girl studying in coffee shop" width="49.1%"> 
+    <img src="images/Image from iOS.gif" id="images/girl" alt="girl studying in coffee shop" width="49.1%"> -->
+  </div>
+
+  <button name="time" class="collapsible">Time</button>
+  <div class="content">
+    <button id="focusTimer" title="Focus Timer" class="button">
+      Focus Timer
+      <p id="focusTime">00:08</p>
+    </button>
+    <button id="shortBreakTimer" title="Short Break Timer" class="button">
+      Short Timer
+      <p id="shortTime" >00:02</p>
+    </button>
+    <button id="longBreakTimer" title="Long Break Timer" class="button">
+      Long Timer
+      <p id="longTime" >00:05</p>
+    </button>
+    <div style="text-align: center;">
+    </div>
+  </div>
+
+  <button name="restrictedSites" class="collapsible">Restricted Sites</button>
+  <div class="content">
+    The following are the sites you may access
+    <ul>
+      <li value="Site">site1</li>
+      <li value="Site">site2</li>
+    </ul>
+  </div>
+
+  <button name="about" class="collapsible">About</button>
+  <div class="content">
+    This is version 1.0 of Study Buddy developed by E, J, and B..
+  </div>
+
+  <script src="popup.js"></script>
+  <script src="background.js"></script>
+</body>
+</html>
