@@ -1,3 +1,10 @@
+$.getJSON('data.json', function (data) {
+  console.log(data.sound + "THISIS IS T")
+});
+
+
+
+
 console.log('this is the forground')
 
 document.getElementById ("char").addEventListener ("click", initChar, false);
