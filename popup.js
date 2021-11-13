@@ -1,3 +1,10 @@
+$.getJSON('data.json', function (data) {
+  console.log(data.sound + "THISIS IS T")
+});
+
+
+
+
 console.log('this is the forground')
 
 document.getElementById ("char").addEventListener ("click", initChar, false);
@@ -6,10 +13,13 @@ document.getElementById ("shortBreakTimer").addEventListener ("click", shortTime
 document.getElementById ("longBreakTimer").addEventListener ("click", longTimer, false);
 
 
-/******************  CHARACTER *********************************/
 function initChar() {
-  window.open('character.html','','height=202,width=240,scrollbars=no,titlebar=no,menubar=no,channelmode=yes');
+  window.open('images/girl.png','','height=150,width=175,scrollbars=no,titlebar=no,menubar=no,channelmode=yes');
 }
+
+// PRESENTATION on monday
+// create the timer on page load instead
+// or, make the frame invisible 
 
 
 /******************  POMODORO TIMER *********************************/

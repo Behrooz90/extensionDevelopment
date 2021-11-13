@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:71e6ecf06139bb55620780c86e0fa655cff1e04d03ba471b5e0d4fe4db991671
-size 1071
+ 
+console.log('background running');
+
+chrome.tabs.onActivated.addListener(tab => {
+    chrome.tabs.get(tab.tabId, current_tab_info => {
+        if(/^https:\/\/www\/google/.test(current_tab_info.url)) {
+            chrome.tabs.executeScript(null, {file: '/popup.js'}, () => console.log('injected'))
+        }
+    })
+});
+
+var audio= new Audio("Royalty-Free-Kalimba-Sound-Effects-Sample-Pack/freetousesounds - Royalty Free Kalimba Sound Effects Sample Pack - 04 MUSCInst, Kalimba, G4-004.mp3")
+var sound= document.getElementById("tracks");
+sound.addEventListener("click", function() {
+  sound.addEventListener("change", function() {
+    if(sound.value == "chime")
+    {
+      audio= new Audio ("Royalty-Free-Kalimba-Sound-Effects-Sample-Pack/freetousesounds - Royalty Free Kalimba Sound Effects Sample Pack - 09 MUSCInst, Kalimba, G4-009.mp3");
+      
+    }else if(sound.value=="alarm") {
+      audio= new Audio("Royalty-Free-Kalimba-Sound-Effects-Sample-Pack/freetousesounds - Royalty Free Kalimba Sound Effects Sample Pack - 50 MUSCInst, Kalimba, E4-005.mp3");
+    }
+});
+});
+
+
+
