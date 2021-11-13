@@ -1,0 +1,16 @@
+body { margin:0; }
+
+.yesImage {
+    position: absolute;
+    top: 10pt;
+    right: 30pt;
+    height: 30%;
+    border: 2px solid #000000;
+}
+.noImage {
+    position: absolute;
+    top: 10pt;
+    right: 0pt;
+    height: 30%;
+    border: 2px solid #000000;
+}

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
                                                                   File
 FileName Time   Format ChannelsLibrary Description OriginatorNote format
                                        10 Keys
@@ -455,3 +456,8 @@ Kalimba,                 Kalimba C411pp    ZOOM      Free To
 G4-                      Sound contact     F6, AKG   Use
 005.WAV 0:06   192 32   2Effects microphoneC411pp    Sounds wav
 
+=======
+version https://git-lfs.github.com/spec/v1
+oid sha256:d43c0189bfa89cb64b749571d1783da58daf3b639014c1e56972bf3e2e120b15
+size 22548
+>>>>>>> b59bdbc15fee3206f18f5e5be0e7e0bccc23a6ea
