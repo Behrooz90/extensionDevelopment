@@ -1,4 +1,4 @@
-/* body { margin:0; } */
+body { margin:0; } 
 .collapsible {
     background-color: #eee;
     color: #444;
@@ -13,7 +13,7 @@
     transition: 0.4s;
   }
   
-  /* .active, .collapsible:hover {
+   .active, .collapsible:hover {
     background-color: #ccc; 
   }
   
@@ -23,23 +23,23 @@
       font-size: 1em;
       /* font-weight:900;
       font-family: Bradley Hand; */
-      /* border-width:0.5mm; 
+       border-width:0.5mm; 
       outline: none;
       width:200px;
       color:#fff;
       transition: 0.3s;
-  } */
+  } 
   
   
-  /* .content {
+  .content {
     padding: 0%;
     display: none;
     background-color: white;
     overflow: hidden;
   }
-   */
+   
   
-  /* .button {
+   .button {
     background-color: rgb(255, 255, 255);
     color: black;
     border: 2px solid #e3dcdc;
@@ -48,12 +48,12 @@
     height: 55pt;
     margin-top: 1pt;
     transition-duration: 0.4s;
-  } */
+  } 
   
-  /* .button:hover {
+   .button:hover {
     box-shadow: 3px 4px 4px 3px rgba(135, 135, 135, 0.24);
-  } */ */
-/* .yesImage {
+  } 
+ .yesImage {
     position: absolute;
     top: 10pt;
     right: 30pt;
@@ -66,4 +66,4 @@
     right: 0pt;
     height: 30%;
     border: 2px solid #000000;
-} */
+} 
