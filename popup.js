@@ -1,6 +1,9 @@
-$.getJSON('data.json', function (data) {
-  console.log(data.sound + "THISIS IS T")
-});
+/******************* READING AND WRITING JSON *******************/
+// $.getJSON('data.json', function (data) {
+//   (localStorage.setItem('extensionStorage', JSON.stringify(data))); 
+// });
+// console.log(JSON.parse(localStorage.getItem('extensionStorage')));
+
 
 
 
@@ -61,7 +64,7 @@ function longTimer(){
 }
 
 
-/******************  NOTIFICATION & DROP DOWN *********************************/
+/****************** DROP DOWN *********************************/
 var acc = document.getElementsByClassName("collapsible");
 var i;
 for (i = 0; i < acc.length; i++) {
@@ -84,13 +87,36 @@ for (i = 0; i < acc.length; i++) {
 //     'Generic Message',
 
 //   ]
+/**************** SOUND ***************/
+var currentData= JSON.parse(localStorage.getItem('extensionStorage'))
+var sound= document.getElementById("tracks");
+var newData= {
+  audio: currentData.src, 
+  restrictedSites: currentData.restrictedSites
+};
+sound.addEventListener("click", function() {
+  sound.addEventListener("change", function() {
+    if(sound.value == "chime")
+    {
+      newData.audio= new Audio("Royalty-Free-Kalimba-Sound-Effects-Sample-Pack/freetousesounds - Royalty Free Kalimba Sound Effects Sample Pack - 02 MUSCInst, Kalimba, G4-002.mp3").src;
+      
+    }else if(sound.value=="alarm") {
+      newData.audio= new Audio("Royalty-Free-Kalimba-Sound-Effects-Sample-Pack/freetousesounds - Royalty Free Kalimba Sound Effects Sample Pack - 50 MUSCInst, Kalimba, E4-005.mp3").src;
+    }
+   
+    console.log(newData.audio);
+    (localStorage.setItem('extensionStorage', JSON.stringify(newData)))
+   console.log(JSON.parse(localStorage.getItem('extensionStorage')))
+});
+});
 
-
+/** NOTIFICATION **/
 function notification() {
+  console.log("Entered Notifications!")
   chrome.notifications.create('basicNotification',
     {
       type: 'basic',
-      iconUrl: 'images/sbIcon.png',
+      iconUrl: 'images/new-icon.png',
       title: 'Test Notification',
       message: 'Message',
       priority: 2,
@@ -107,18 +133,32 @@ function notification() {
     }
    ) 
    //the following section is cut the audio short
- audio.play(); 
- setTimeout(() => {
-   audio.pause();
-   audio.currentTime = 0; 
-}, 300);
+ audios= new Audio(JSON.parse(localStorage.getItem('extensionStorage')).audio);
+ console.log(audios)
+
+ var playPromise = audios.play();
+  if (playPromise !== undefined) {
+    playPromise.then(_ => {
+      // Automatic playback started!
+      // Show playing UI.
+      setTimeout(() => {
+        audios.pause();
+        audios.currentTime = 0; 
+     }, 300);
+    })
+    .catch(error => {
+      // Auto-play was prevented
+      // Show paused UI.
+    });
+  }
+ 
 }
  
 function yesButton(){
   shortTimer();
   console.log('yes button worked');
 }
- 
+
 
 
 
