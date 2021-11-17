@@ -4,7 +4,10 @@
 // });
 // console.log(JSON.parse(localStorage.getItem('extensionStorage')));
 
-
+// function othername() {
+//   var input = document.getElementById("userInput").value;
+//   console.log(input = document.getElementById("userInput").value);
+// }
 
 
 
