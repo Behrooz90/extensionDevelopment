@@ -1,13 +1,8 @@
-/******************* READING AND WRITING JSON *******************/
+/******************* READING AND WRITING JSON ***********!!UNCOMMENT THIS SECTION TO RESET STORAGE!!********/
 // $.getJSON('data.json', function (data) {
 //   (localStorage.setItem('extensionStorage', JSON.stringify(data))); 
 // });
 // console.log(JSON.parse(localStorage.getItem('extensionStorage')));
-
-// function othername() {
-//   var input = document.getElementById("userInput").value;
-//   console.log(input = document.getElementById("userInput").value);
-// }
 
 
 
@@ -22,11 +17,6 @@ document.getElementById ("longBreakTimer").addEventListener ("click", longTimer,
 function initChar() {
   window.open('images/girl.png','','height=150,width=175,scrollbars=no,titlebar=no,menubar=no,channelmode=yes');
 }
-
-// PRESENTATION on monday
-// create the timer on page load instead
-// or, make the frame invisible 
-
 
 /******************  POMODORO TIMER *********************************/
 function focusTimer(){
@@ -94,8 +84,8 @@ for (i = 0; i < acc.length; i++) {
 var currentData= JSON.parse(localStorage.getItem('extensionStorage'))
 var sound= document.getElementById("tracks");
 var newData= {
-  audio: currentData.src, 
-  restrictedSites: currentData.restrictedSites
+  "audio": currentData.src, 
+  "restrictedSites": currentData.restrictedSites
 };
 sound.addEventListener("click", function() {
   sound.addEventListener("change", function() {
@@ -107,9 +97,9 @@ sound.addEventListener("click", function() {
       newData.audio= new Audio("Royalty-Free-Kalimba-Sound-Effects-Sample-Pack/freetousesounds - Royalty Free Kalimba Sound Effects Sample Pack - 50 MUSCInst, Kalimba, E4-005.mp3").src;
     }
    
-    console.log(newData.audio);
+    // console.log(newData.audio);
     (localStorage.setItem('extensionStorage', JSON.stringify(newData)))
-   console.log(JSON.parse(localStorage.getItem('extensionStorage')))
+    console.log(JSON.parse(localStorage.getItem('extensionStorage')))
 });
 });
 
@@ -137,13 +127,12 @@ function notification() {
    ) 
    //the following section is cut the audio short
  audios= new Audio(JSON.parse(localStorage.getItem('extensionStorage')).audio);
- console.log(audios)
+//  console.log(audios)
 
  var playPromise = audios.play();
   if (playPromise !== undefined) {
     playPromise.then(_ => {
       // Automatic playback started!
-      // Show playing UI.
       setTimeout(() => {
         audios.pause();
         audios.currentTime = 0; 
@@ -151,7 +140,6 @@ function notification() {
     })
     .catch(error => {
       // Auto-play was prevented
-      // Show paused UI.
     });
   }
  
@@ -164,7 +152,26 @@ function yesButton(){
 
 
 
+/********** RESTRICTED SITES **********/ 
+var typeBox= document.getElementById("form").addEventListener("click", function(){
+  // typeBox.addEventListener("click", function() {
+    console.log("Input box entered");
+    console.log(JSON.parse(localStorage.getItem('extensionStorage')))
 
+  });
+
+document.getElementById("submit").addEventListener("click", function(){
+  var currentData= JSON.parse(localStorage.getItem('extensionStorage'))
+  var newData= {
+  "audio": currentData.src, 
+  "restrictedSites": currentData.restrictedSites.push(document.getElementById("userInput").value)
+};
+  console.log("Submit has been clicked");
+  (localStorage.setItem('extensionStorage', JSON.stringify(currentData)))
+  var c= JSON.parse(localStorage.getItem('extensionStorage'))
+  console.log(c.restrictedSites);
+
+});
 
 /*  THIS IS THE SECTION FOR THE POP IMAGE 
 var imageIds = ["images/girl"];
