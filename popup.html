@@ -52,11 +52,12 @@
 
   <button name="restrictedSites" class="collapsible">Restricted Sites</button>
   <div class="content">
-    The following are the sites you may access
-    <ul>
-      <li value="Site">site1</li>
-      <li value="Site">site2</li>
-    </ul>
+  
+    <form id="form" onsubmit="return false;">
+      <label for="fname">Paste the link you do not wish to access:</label><br>
+      <input type="text" id="userInput" />
+      <input type="submit" onclick="othername();" />
+  </form>
   </div>
 
   <button name="deskItems" class="collapsible">Desk Items</button>
