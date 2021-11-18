@@ -13,8 +13,9 @@ document.getElementById ("shortBreakTimer").addEventListener ("click", shortTime
 document.getElementById ("longBreakTimer").addEventListener ("click", longTimer, false);
 
 
+/******************  CHARACTER *********************************/
 function initChar() {
-  window.open('images/girl.png','','height=150,width=175,scrollbars=no,titlebar=no,menubar=no,channelmode=yes');
+  window.open('character.html','','height=202,width=240,scrollbars=no,titlebar=no,menubar=no,channelmode=yes');
 }
 
 /******************  POMODORO TIMER *********************************/
