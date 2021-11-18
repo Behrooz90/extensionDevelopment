@@ -1,4 +1,4 @@
-/******************* READING AND WRITING JSON ***********!!UNCOMMENT THIS SECTION TO RESET STORAGE!!********/
+/******************* READING AND WRITING JSON ***********!!UNCOMMENT THIS SECTION TO RESET STORAGE!! OR PRESS CLEAR ALL IN RESTRICTED SITES!********/
 // $.getJSON('data.json', function (data) {
 //   (localStorage.setItem('extensionStorage', JSON.stringify(data))); 
 // });
@@ -6,7 +6,7 @@
 
 
 
-console.log('this is the forground')
+console.log('this is the forground');
 
 document.getElementById ("char").addEventListener ("click", initChar, false);
 document.getElementById ("focusTimer").addEventListener ("click", focusTimer, false);
@@ -97,9 +97,9 @@ sound.addEventListener("click", function() {
       newData.audio= new Audio("Royalty-Free-Kalimba-Sound-Effects-Sample-Pack/freetousesounds - Royalty Free Kalimba Sound Effects Sample Pack - 50 MUSCInst, Kalimba, E4-005.mp3").src;
     }
    
-    // console.log(newData.audio);
+    //  console.log(newData.audio);
     (localStorage.setItem('extensionStorage', JSON.stringify(newData)))
-    console.log(JSON.parse(localStorage.getItem('extensionStorage')))
+    console.log(JSON.parse(localStorage.getItem('extensionStorage')));
 });
 });
 
@@ -129,7 +129,7 @@ function notification() {
  audios= new Audio(JSON.parse(localStorage.getItem('extensionStorage')).audio);
 //  console.log(audios)
 
- var playPromise = audios.play();
+ var playPromise = audios.play();               
   if (playPromise !== undefined) {
     playPromise.then(_ => {
       // Automatic playback started!
@@ -156,22 +156,39 @@ function yesButton(){
 var typeBox= document.getElementById("form").addEventListener("click", function(){
   // typeBox.addEventListener("click", function() {
     console.log("Input box entered");
-    console.log(JSON.parse(localStorage.getItem('extensionStorage')))
+    console.log(JSON.parse(localStorage.getItem('extensionStorage')));
 
   });
 
 document.getElementById("submit").addEventListener("click", function(){
   var currentData= JSON.parse(localStorage.getItem('extensionStorage'))
+  console.log(currentData.audio);
   var newData= {
-  "audio": currentData.src, 
+  "audio": currentData.audio, 
   "restrictedSites": currentData.restrictedSites.push(document.getElementById("userInput").value)
-};
+}
   console.log("Submit has been clicked");
+  console.log(newData.audio);
   (localStorage.setItem('extensionStorage', JSON.stringify(currentData)))
   var c= JSON.parse(localStorage.getItem('extensionStorage'))
-  console.log(c.restrictedSites);
+  console.log(c);
+
 
 });
+document.getElementById("clear").addEventListener("click", function(){
+  var currentData= JSON.parse(localStorage.getItem('extensionStorage'))
+  //  sound= (currentData.audio)
+   console.log(currentData.src);
+
+  var newData= {
+  "audio": currentData.audio,
+  "restrictedSites": []
+}
+console.log(newData);
+(localStorage.setItem('extensionStorage', JSON.stringify(newData)))
+console.log(JSON.parse(localStorage.getItem('extensionStorage')))
+});
+
 
 /*  THIS IS THE SECTION FOR THE POP IMAGE 
 var imageIds = ["images/girl"];
