@@ -1,3 +1,35 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ff427454d54bac6bab491092ebc051909901e9dc9cb1c635b2d0ad79d961ac26
-size 789
+{
+    "manifest_version":2,
+    "name": "Study Space",
+    "version": "2.1.0",
+    "content_scripts":[
+       { 
+        "matches":[
+            "http://*/*", "https://*/*"
+        ],   
+        "js":["popup.js"]
+    }
+    ],
+    "background":{
+        "scripts": ["background.js"]
+    },
+    "description": "A Study Space button for your tool bar.",
+    "icons":{"128":"images/book.png"},
+    "browser_action": {
+        "default_icon": "images/book.png",
+        "default_title":"Study Space", 
+        "default_popup": "popup.html"
+    }, 
+    "web_accessible_resources": [
+         "images/*.*" , "Royalty-Free-Kalimba-Sound-Effects-Sample-Pack/*.*"
+      ],
+    "permissions":[
+       "activeTab",
+        "tabs",
+        "notifications",
+        "storage",
+        "<all_urls>"
+    ],
+    "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'"
+
+}

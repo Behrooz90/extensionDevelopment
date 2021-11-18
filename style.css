@@ -1,3 +1,109 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:82ee7c03b9cee9fe5c4546314a4b8eb6af0e55f3e54d2c6b3aaea272a352ea10
-size 1020
+html *
+{
+   font-size: 15px;
+   /* color: #000 !important; */
+   font-family: 'Indie Flower', serif;
+}
+
+.collapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 200px;
+  border: none;
+  text-align: left;
+  outline: none;
+  transition: 0.4s;
+}
+
+.active, .collapsible:hover {
+  background-color: #ccc; 
+}
+
+.char {
+    background-color: #444;
+    padding: 2px;
+    border-width:0.5mm; 
+    outline: none;
+    width:200px;
+    color:#fff;
+    transition: 0.3s;
+}
+
+
+.content {
+  padding: 0%;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+
+
+.button {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  border: 2px solid #e3dcdc;
+  width: 32%;
+  /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+  height: 55pt;
+  margin-top: 1pt;
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  box-shadow: 3px 4px 4px 3px rgba(135, 135, 135, 0.24);
+}
+
+
+/* SLIDER SWITCHES */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #d6d6d6;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #db534e85;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #cecece;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #cecece;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
