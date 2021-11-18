@@ -1,6 +1,6 @@
 {
     "manifest_version":2,
-    "name": "Chroma",
+    "name": "Study Space",
     "version": "2.1.0",
     "content_scripts":[
        { 
@@ -13,11 +13,11 @@
     "background":{
         "scripts": ["background.js"]
     },
-    "description": "A Chroma button for your tool bar.",
+    "description": "A Study Space button for your tool bar.",
     "icons":{"128":"images/bookLogo.png"},
     "browser_action": {
         "default_icon": "images/bookLogo.png",
-        "default_title":"Chroma", 
+        "default_title":"Study Space", 
         "default_popup": "popup.html"
     }, 
     "web_accessible_resources": [
