@@ -23,10 +23,6 @@ function initChar() {
   window.open('images/girl.png','','height=150,width=175,scrollbars=no,titlebar=no,menubar=no,channelmode=yes');
 }
 
-// PRESENTATION on monday
-// create the timer on page load instead
-// or, make the frame invisible 
-
 
 /******************  POMODORO TIMER *********************************/
 function focusTimer(){
@@ -85,11 +81,6 @@ for (i = 0; i < acc.length; i++) {
 }
 
 
-// function notification(){
-//   messages [
-//     'Generic Message',
-
-//   ]
 /**************** SOUND ***************/
 var currentData= JSON.parse(localStorage.getItem('extensionStorage'))
 var sound= document.getElementById("tracks");
