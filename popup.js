@@ -185,16 +185,16 @@ console.log(JSON.parse(localStorage.getItem('extensionStorage')))
 });
 
 
-/*  THIS IS THE SECTION FOR THE POP IMAGE 
+//THIS IS THE SECTION FOR THE POP IMAGE 
 var imageIds = ["images/girl"];
-Making the button. When clciked it should show the image 
+//Making the button. When clciked it should show the image 
 let loadButton = document.createElement('button');
 loadButton.innerText = 'Load images';
 loadButton.addEventListener('click', handleLoadRequest);
 document.querySelector('body').append(loadButton);
 
 function handleLoadRequest() {
-  for (var id of imageIds) {
+  /*for (var id of imageIds) {
     console.log(id +"this is ID");
     var element = document.getElementById(id);
     console.log(element +"this is element");
@@ -203,8 +203,16 @@ function handleLoadRequest() {
   chrome.sendMessage(element.src)
    var imgURL = chrome.runtime.getURL("images/girl.png");
    document.getElementById("images/girl").src = imgURL;
-
-    
-   }
-}
+  }
 */
+  var iconURL = chrome.extension.getURL("images/girl.png");
+  chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
+ //console.log(document.documentElement.innerHTML);
+   // window.location.href = window.open(iconURL);
+    //document.body.appendChild(iconURL);
+  });
+  chrome.tabs.executeScript({
+     code: 'text = document.createTextNode("WHERE ARE YOU NOW "); document.body.appendChild(text)',
+     code: 'text = document.createTextNode("AND NOW "); document.body.appendChild(text)'
+   });
+}
