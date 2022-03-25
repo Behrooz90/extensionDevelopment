@@ -15,7 +15,7 @@ document.getElementById ("longBreakTimer").addEventListener ("click", longTimer,
 
 
 function initChar() {
-  window.open('images/BLINK.gif','','height=150,width=175,scrollbars=no,titlebar=no,menubar=no,channelmode=yes');
+  window.open('images/Animate.gif','','height=150,width=175,scrollbars=no,titlebar=no,menubar=no,channelmode=yes');
 }
 
 /******************  POMODORO TIMER *********************************/
