@@ -186,7 +186,7 @@ console.log(JSON.parse(localStorage.getItem('extensionStorage')))
 
 
 //THIS IS THE SECTION FOR THE POP IMAGE 
-var imageIds = ["images/girl"];
+var imageIds = ["girl_BLINK"];
 //Making the button. When clciked it should show the image 
 let loadButton = document.createElement('button');
 loadButton.innerText = 'Load images';
@@ -205,7 +205,7 @@ function handleLoadRequest() {
    document.getElementById("images/girl").src = imgURL;
   }
 */
-  var iconURL = chrome.extension.getURL("images/girl.png");
+  var iconURL = chrome.extension.getURL("images/BLINK.gif");
   chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
  //console.log(document.documentElement.innerHTML);
    // window.location.href = window.open(iconURL);
