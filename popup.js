@@ -187,7 +187,7 @@ console.log(JSON.parse(localStorage.getItem('extensionStorage')))
 
 //THIS IS THE SECTION FOR THE POP IMAGE 
 var imageIds = ["girl_BLINK"];
-//Making the button. When clciked it should show the image 
+//Making the button. When cliked it should show the image 
 let loadButton = document.createElement('button');
 loadButton.innerText = 'Load images';
 loadButton.addEventListener('click', handleLoadRequest);
