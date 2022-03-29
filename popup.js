@@ -15,7 +15,7 @@ document.getElementById ("longBreakTimer").addEventListener ("click", longTimer,
 
 
 function initChar() {
-  window.open('images/girl.png','','height=150,width=175,scrollbars=no,titlebar=no,menubar=no,channelmode=yes');
+  window.open('images/girl.png','','height=150,width=175,scrollbars=no,titlebar=no,menubar=no,channelmode=yes'); //this is responsible for the chrome window image/gif popup
 }
 
 /******************  POMODORO TIMER *********************************/
@@ -79,7 +79,7 @@ for (i = 0; i < acc.length; i++) {
 var currentData= JSON.parse(localStorage.getItem('extensionStorage'))
 var sound= document.getElementById("tracks");
 var newData= {
-  "audio": currentData.src, 
+  "audio": currentData.src, //there is an uncaught error here when I inspect in Chrome
   "restrictedSites": currentData.restrictedSites
 };
 sound.addEventListener("click", function() {
