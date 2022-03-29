@@ -9,7 +9,6 @@ console.log('background running');
            console.log("MATCH FOUND!")
             alert("This site has been restricted!");
        }
-
     });
 });*/
 
