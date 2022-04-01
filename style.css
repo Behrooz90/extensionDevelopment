@@ -27,6 +27,28 @@ html *
   background-color: #ccc; 
 }
 
+/* START draggable GIF popup CSS */
+
+.window {
+  width: 400px;
+  height: 400px;
+  background-color: #f1f1f1;
+}
+.window .header {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: #999;
+  text-align: center;
+  line-height: 50px;
+  cursor: move;
+}
+.window .content {
+  padding: 5px;
+}
+
+/* END draggable GIF popup CSS */
+
 /* class = "char" (line 12 popup.html) */
 .char {
     background-color: #444;

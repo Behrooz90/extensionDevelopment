@@ -8,7 +8,7 @@
 
 console.log('this is the forground');
 
-document.getElementById ("char").addEventListener ("click", initChar, false);
+document.getElementById ("char").addEventListener ("click", draggableGIF, false); //used to be initChar instead of draggableGIF
 document.getElementById ("focusTimer").addEventListener ("click", focusTimer, false);
 document.getElementById ("shortBreakTimer").addEventListener ("click", shortTimer, false);
 document.getElementById ("longBreakTimer").addEventListener ("click", longTimer, false);
@@ -16,6 +16,13 @@ document.getElementById ("longBreakTimer").addEventListener ("click", longTimer,
 
 function initChar() {
   window.open('images/Animate.gif','','height=150,width=175,scrollbars=no,titlebar=no,menubar=no,channelmode=yes');//this is responsible for the chrome window image/gif popup
+}
+
+function draggableGIF() {
+  window.location.href = "character.html";
+
+  //return chrome.extension.getBackgoundPage().
+  //location.assign(character.innerHTML);
 }
 
 /******************  POMODORO TIMER *********************************/
